@@ -1,0 +1,21 @@
+"use strict";
+var gulp = require('gulp');
+var runSequence = require('run-sequence').use(gulp);
+var browserSync = require('browser-sync');
+var reload = browserSync.reload;
+
+gulp.task('styles', function(callback) {
+  runSequence(
+    'styles--compile',
+    'styles--clear',
+    callback
+  );
+});
+
+gulp.task('styles--watch', function() {
+  runSequence(
+    'clean--styles',
+    'styles',
+    reload
+  );
+});

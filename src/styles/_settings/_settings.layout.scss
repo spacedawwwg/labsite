@@ -1,0 +1,69 @@
+// Baseline Height
+$baseline: 6px;
+
+// Media queries breakpoints
+// Small screen / mobile
+$screen-xs: 320px;
+$screen-xs--min: $screen-xs;
+// Small screen / small tablet
+$screen-sm: 600px;
+$screen-sm--min: $screen-sm;
+// Medium screen / tablet
+$screen-md: 768px;
+$screen-md--min: $screen-md;
+// Large screen / desktop
+$screen-lg: 1024px;
+$screen-lg--min: $screen-lg;
+// X-Large screen / desktop
+$screen-xl: 1280px;
+$screen-xl--min: $screen-xl;
+// Max widths
+$screen-xs--max: ($screen-sm--min - 1);
+$screen-sm--max: ($screen-md--min - 1);
+$screen-md--max: ($screen-lg--min - 1);
+$screen-lg--max: ($screen-xl--min - 1);
+// To enable support for browsers that do not support $media queries,
+// (IE <= 8, Firefox <= 3, Opera <= 9) set $mq-responsive to false
+// Create a separate stylesheet served exclusively to these browsers,
+// meaning $media queries will be rasterized, relying on the cascade itself
+$mq-responsive: true;
+// Name your breakpoints in a way that creates a ubiquitous language
+// across team members. It will improve communication between
+// stakeholders, designers, developers, and testers.
+$mq-breakpoints: (
+  screen-xs--min: $screen-xs--min,
+  screen-xs--max: $screen-xs--max,
+  screen-sm--min: $screen-sm--min,
+  screen-sm--max: $screen-sm--max,
+  screen-md--min: $screen-md--min,
+  screen-md--max: $screen-md--max,
+  screen-lg--min: $screen-lg--min,
+  screen-lg--max: $screen-lg--max,
+  screen-xl--min: $screen-xl--min
+);
+// Define the breakpoint from the $mq-breakpoints list that should
+// be used as the target width when outputting a static stylesheet
+// (i.e. when $mq-responsive is set to 'false').
+$mq-static-breakpoint: screen-lg--min;
+
+// Grid system
+// Number of columns in the grid.
+$grid-columns: 24;
+// Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width: 20px;
+// Container sizes
+// For `$screen-sm--min` and up.
+$container-sm: ($screen-sm - $grid-gutter-width) !default;
+// For `$screen-md--min` and up.
+$container-md: ($screen-md - $grid-gutter-width) !default;
+// For `$screen-lg--min` and up.
+$container-lg: ($screen-lg - $grid-gutter-width) !default;
+// For `$screen-xl--min` and up.
+$container-xl: ($screen-xl - $grid-gutter-width) !default;
+// Grid prefixes
+$grid-row-prefix: '.row';
+$grid-row-nested-prefix: '#{$grid-row-prefix}--nested';
+$grid-col-prefix: '#{$grid-row-prefix}__col--';
+$grid-col-nested-prefix: '#{$grid-row-prefix}__col--';
+$grid-nested: false;
+

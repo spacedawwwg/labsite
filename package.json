@@ -1,0 +1,73 @@
+{
+  "name": "labsite-boilerplate",
+  "version": "0.1.0",
+  "description": "Source code for a static, HTML lab site",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/spacedawwwg/labsite-boilerplate.git"
+  },
+  "homepage": "http://spacedawwwg.com",
+  "main": "gulpfile.js",
+  "author": {
+    "name": "Paul Welsh",
+    "email": "hello@spacedawwwg.com",
+    "url": "http://spacedawwwg.com"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "browserify": "^13.0.0",
+    "del": "^2.2.0",
+    "finalhandler": "^0.4.1",
+    "glob": "^7.0.3",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-data": "^1.2.1",
+    "gulp-environments": "^0.1.1",
+    "gulp-exec": "^2.1.2",
+    "gulp-extname": "^0.2.2",
+    "gulp-filelist": "spacedawwwg/gulp-filelist",
+    "gulp-flatten": "^0.2.0",
+    "gulp-front-matter": "^1.3.0",
+    "gulp-hb": "^3.2.1",
+    "gulp-html-minifier": "^0.1.8",
+    "gulp-htmltidy": "^0.2.2",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-inject": "^3.0.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-modernizr": "^1.0.0-alpha",
+    "gulp-plumber": "^1.0.1",
+    "gulp-prettify": "^0.4.0",
+    "gulp-pxtorem": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-sass-generate-contents": "spacedawwwg/gulp-sass-generate-contents",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-styledown": "spacedawwwg/gulp-styledown",
+    "gulp-svg-sprite": "^1.2.19",
+    "gulp-svg2png": "^1.0.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-util": "^3.0.7",
+    "handlebars": "^4.0.1",
+    "handlebars-helpers": "spacedawwwg/handlebars-helpers",
+    "handlebars-layouts": "^3.1.2",
+    "imagemin-pngquant": "^4.2.0",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^2.1.0",
+    "moment": "^2.10.6",
+    "ngrok": "^2.1.6",
+    "open": "0.0.5",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.5",
+    "serve-static": "^1.10.2",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {},
+  "scripts": {
+    "test": "gulp"
+  }
+}

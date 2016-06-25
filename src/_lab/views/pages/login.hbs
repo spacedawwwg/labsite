@@ -1,0 +1,21 @@
+{{#extend "master"}}
+  {{#content "master__head" mode="append"}}
+    {{#block "head"}}{{/block}}
+  {{/content}}
+  {{#content "master__main"}}
+    <form class="lab-form" id="lab_passwordForm" name="lab_passwordForm" action="/login.html">
+      <div class="lab-form__body">
+        <input type="password" name="lab_passwordInput" id="lab_passwordInput" placeholder="Enter password" />
+        <button type="submit" id="lab_passwordButton">Confirm</button>
+        <div id="lab_passwordError"></div>
+      </div>
+      <noscript>
+        <p>Javascript is required to access this area.</p>
+      </noscript>
+    </form>
+  {{/content}}
+  {{#content "master__foot" mode="append"}}
+    {{#block "foot"}}{{/block}}
+  {{/content}}
+{{/extend}}
+

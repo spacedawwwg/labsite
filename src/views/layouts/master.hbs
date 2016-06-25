@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>{{pageData.title}}</title>
+    <meta name="description" content="{{pageData.description}}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {{#block "master__head"}}{{/block}}
+
+    <!-- head:css -->
+    <!-- endinject -->
+
+    <!-- head:js -->
+    <!-- endinject -->
+
+    <!-- access:js -->
+    <!-- endinject -->
+
+  </head>
+  <body>
+    <!--[if lt IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    {{#block "master__header"}}
+      {{!-- {{> header}} --}}
+    {{/block}}
+
+    <main role="main" class="main">
+      {{#block "master__main"}}{{/block}}
+    </main>
+
+    {{#block "master__footer"}}
+      {{!-- {{> footer}} --}}
+    {{/block}}
+
+    {{#block "master__foot"}}
+      <!--[if !(lt IE 9)]><!-->
+      <!-- foot:js -->
+      <!-- endinject -->
+      <!--<![endif]-->
+    {{/block}}
+
+  </body>
+</html>

@@ -1,0 +1,34 @@
+# debugging
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.yo-rc.json
+pids
+logs
+results
+
+# OS
+.DS_Store
+Desktop.ini
+Icon
+
+._*
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# project meta
+*.sublime-workspace
+
+# installed components
+bower_components
+node_modules
+
+# generated components
+dist
+styleguide
