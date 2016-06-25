@@ -1,4 +1,4 @@
-# Spacedawwwg's Lab Site Boilerplate
+# Lab Site Boilerplate [![Build Status][travis-image]][travis-url]
 Lab site source code for [ENTER PROJECT NAME]
 
 __URL:__ [ENTER PROJECT LAB SITE URL]
