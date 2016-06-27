@@ -15,7 +15,7 @@ var build = function(callback) {
     'styles',
     'markup',
     'assets',
-    'styleguide',
+    'styleguides',
     'lab',
     callback
   );
