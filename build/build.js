@@ -17,6 +17,7 @@ var build = function(callback) {
     'assets',
     'styleguide',
     'lab',
+    'robots',
     callback
   );
 }
