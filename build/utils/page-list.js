@@ -39,9 +39,9 @@ module.exports = function(outputFile) {
     pageData.url = outputPath;
 
     if (pageData.data.styleguide === true) {
-      fileList.unshift(data);
+      fileList.unshift(pageData);
     } else {
-      fileList.push(data);
+      fileList.push(pageData);
     }
 
     this.push(file);
