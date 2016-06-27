@@ -6,7 +6,6 @@ var reload = browserSync.reload;
 
 gulp.task('lab', function(callback) {
   runSequence(
-    //'lab--list',
     'lab--copy',
     'lab--styles',
     'lab--compile',
