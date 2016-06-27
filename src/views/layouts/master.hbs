@@ -15,31 +15,32 @@
     <!-- head:js -->
     <!-- endinject -->
 
+    <!-- NOTE: access.js is for Lab Site only, do not include solution. -->
     <!-- access:js -->
     <!-- endinject -->
 
   </head>
   <body>
-    <!--[if lt IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+    {{> browser-upgrade}}
 
     {{#block "master__header"}}
-      {{!-- {{> header}} --}}
+      {{> header}}
     {{/block}}
 
-    <main role="main" class="main">
+    <main class="main" role="main">
       {{#block "master__main"}}{{/block}}
     </main>
 
     {{#block "master__footer"}}
-      {{!-- {{> footer}} --}}
+      {{> footer}}
     {{/block}}
 
     {{#block "master__foot"}}
       <!--[if !(lt IE 9)]><!-->
+
       <!-- foot:js -->
       <!-- endinject -->
+
       <!--<![endif]-->
     {{/block}}
 

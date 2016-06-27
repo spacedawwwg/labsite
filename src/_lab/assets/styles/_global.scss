@@ -1,0 +1,30 @@
+// Global
+
+* {
+
+    &,
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+  line-height: $baseline*4;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: $baseline*8;
+}
+
+.lab-main {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 20px;
+}

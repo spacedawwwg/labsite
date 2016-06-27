@@ -25,11 +25,14 @@
     <![endif]-->
 
     {{#block "master__header"}}
+      {{> lab-header}}
     {{/block}}
 
-    <main role="main" class="lab-main">
-      {{#block "master__main"}}{{/block}}
-    </main>
+    {{#if (content "master__main")}}
+      <main role="main" class="lab-main">
+        {{#block "master__main"}}{{/block}}
+      </main>
+    {{/if}}
 
     {{#block "master__footer"}}
     {{/block}}

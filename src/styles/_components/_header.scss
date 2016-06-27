@@ -1,1 +1,22 @@
 // Header
+
+.header {
+  @include container-fixed;
+  border-bottom: 1px solid #ddd;
+
+  @include mq($from: screen-sm--min) {
+    width: $container-sm;
+  }
+
+  @include mq($from: screen-md--min) {
+    width: $container-md;
+  }
+
+  @include mq($from: screen-lg--min) {
+    width: $container-lg;
+  }
+
+  @include mq($from: screen-xl--min) {
+    width: $container-xl;
+  }
+}

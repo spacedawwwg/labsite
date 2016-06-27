@@ -1,0 +1,21 @@
+ {{!-- pageList is a generated file See /build/config.js & /build/lab/lab--list.js --}}
+<h2>Styleguide</h2>
+<ul class="lab-list">
+  {{#each pageList}}
+    {{#if data.styleguide}}
+    <li class="lab-list__item">
+      <a href="{{url}}">{{data.title}}</a>
+    </li>
+    {{/if}}
+  {{/each}}
+</ul>
+<h2>Pages</h2>
+<ul class="lab-list">
+  {{#each pageList}}
+    {{#unless data.styleguide}}
+    <li class="lab-list__item">
+      <a href="{{url}}">{{data.title}}</a>
+    </li>
+    {{/unless}}
+  {{/each}}
+</ul>

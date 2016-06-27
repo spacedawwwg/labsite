@@ -1,1 +1,23 @@
 // Footer
+
+.footer {
+  @include container-fixed;
+  border-top: 1px solid #ddd;
+  padding-top: $baseline*2;
+
+  @include mq($from: screen-sm--min) {
+    width: $container-sm;
+  }
+
+  @include mq($from: screen-md--min) {
+    width: $container-md;
+  }
+
+  @include mq($from: screen-lg--min) {
+    width: $container-lg;
+  }
+
+  @include mq($from: screen-xl--min) {
+    width: $container-xl;
+  }
+}

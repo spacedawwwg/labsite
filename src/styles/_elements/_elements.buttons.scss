@@ -4,9 +4,19 @@
 * Default Button:
 *
 *     @example
-*     a.button Default Button Link
 *     button.button Default Button
+*     a.button Default Button Link
 */
 .button {
-
+  background: $color-brand--a;
+  border: 0;
+  border-radius: 3px;
+  color: #FFF;
+  display: inline-block;
+  font-size: 14px;
+  line-height: $baseline*3;
+  outline: 0;
+  padding: $baseline 10px;
+  text-align: center;
+  text-decoration: none;
 }
