@@ -30,8 +30,7 @@ var paths = {
     dist: basePaths.dist + 'media/'
   },
   views: {
-    layouts: basePaths.src + 'views/layouts/',
-    partials: basePaths.src + 'views/partials/',
+    src: basePaths.src + 'views/',
     pages: basePaths.src + 'views/pages/'
   },
   data: {
@@ -41,33 +40,32 @@ var paths = {
   lab: {
     src: basePaths.src + '_lab/',
     dist: basePaths.dist + '_lab/'
+  },
+  styleguide: {
+    src: basePaths.src + 'styleguide/',
+    dist: basePaths.dist + 'styleguide/'
   }
 };
 
 var labFiles = {
   pages: paths.lab.src + 'views/pages/*.hbs',
-  views: [
-    paths.lab.src + 'views/layouts/**/*',
-    paths.lab.src + 'views/partials/**/*'
-  ],
+  views: {
+    layouts: paths.lab.src +  'views/layouts/**/*.hbs',
+    partials: paths.lab.src +  'views/partials/**/*.hbs'
+  },
   assets: [
     paths.lab.src + 'assets/**/*',
     '!' + paths.lab.src + 'assets/**/*.scss'
   ],
   accessJs: paths.lab.dist + 'access.js',
-  styledownJs: paths.lab.dist + 'styledown.js',
-  filelist: 'filelist.json',
+  pageList: 'pageList.json',
   styles: {
     main: paths.lab.src + 'assets/styles/main.scss'
-  },
-  styledown: {
-    view: paths.lab.src + 'views/layouts/styleguide.hbs',
-    outputFile: 'styleguide.html'
   }
 }
 
 var inputFiles = {
-  pages: paths.views.pages + '**/*',
+  pages: paths.views.pages + '/**/*.hbs',
   data: paths.data.src + '**/*.json',
   scripts: {
     main: paths.scripts.src + 'index.js'
@@ -84,10 +82,15 @@ var inputFiles = {
       paths.styles.src + '_trumps/**/*.scss'
     ]
   },
-  views: [
-    paths.views.layouts + '**/*',
-    paths.views.partials + '**/*'
-  ]
+  views: {
+    layouts: paths.views.src + 'layouts/**/*.hbs',
+    partials: paths.views.src + 'partials/**/*.hbs'
+  },
+  styleguide: {
+    outputFile: 'styleguide.html',
+    js: paths.styleguide.src + 'styleguide.js',
+    sass: paths.styleguide.src + 'styleguide.scss'
+  }
 };
 
 var outputFiles = {
@@ -99,7 +102,7 @@ var outputFiles = {
   }
 };
 
-var styles = {
+var styleOptions = {
   autoprefixer: {
     browsers: [
       'last 3 versions',
@@ -121,5 +124,5 @@ module.exports = {
   labFiles: labFiles,
   inputFiles: inputFiles,
   outputFiles: outputFiles,
-  styles: styles
+  styleOptions: styleOptions
 };

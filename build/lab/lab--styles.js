@@ -8,14 +8,11 @@ var autoprefixer = require('gulp-autoprefixer');
 var environments = require('gulp-environments');
 var rename = require('gulp-rename');
 
-// Site
 var config = require('../config');
 var handleError = require('../utils/handle-error');
 
-// Compile CSS from Sass files
 gulp.task('lab--styles', function() {
 
-  // Default output
   return gulp.src(config.labFiles.styles.main)
     .pipe(plumber({
       errorHandler: handleError
@@ -26,8 +23,8 @@ gulp.task('lab--styles', function() {
       sourceMapEmbed: environments.development() ? true : false,
       outputStyle: environments.development() ? 'nested' : 'compressed'
     }))
-    .pipe(autoprefixer(config.styles.autoprefixer))
-    .pipe(pxtorem(config.styles.pxtorem))
+    .pipe(autoprefixer(config.styleOptions.autoprefixer))
+    .pipe(pxtorem(config.styleOptions.pxtorem))
     .pipe(environments.development(sourcemaps.write()))
     .pipe(gulp.dest(config.paths.lab.dist));
 });

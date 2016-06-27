@@ -10,11 +10,9 @@ var environments = require('gulp-environments');
 var rename = require('gulp-rename');
 var del = require('del');
 
-// Site
 var config = require('../config');
 var handleError = require('../utils/handle-error');
 
-// Compile CSS from Sass files
 gulp.task('styles--generate', function() {
   return gulp.src(config.inputFiles.styles.itcss)
     .pipe(plumber({
@@ -24,8 +22,7 @@ gulp.task('styles--generate', function() {
     .pipe(gulp.dest(config.paths.styles.src));
 });
 
-// Compile CSS from Sass files
-gulp.task('styles--compile', ['styles--generate'], function() {
+gulp.task('styles--compile', function() {
   return gulp.src(config.inputFiles.styles.main)
     .pipe(plumber({
       errorHandler: handleError
@@ -40,13 +37,13 @@ gulp.task('styles--compile', ['styles--generate'], function() {
       source_map_contents: false,
       source_comments: false
     }))
-    .pipe(autoprefixer(config.styles.autoprefixer))
-    .pipe(pxtorem(config.styles.pxtorem))
+    .pipe(autoprefixer(config.styleOptions.autoprefixer))
+    .pipe(pxtorem(config.styleOptions.pxtorem))
     .pipe(environments.development(sourcemaps.write()))
     .pipe(rename(config.outputFiles.styles.main))
     .pipe(gulp.dest(config.paths.styles.dist));
 });
 
-gulp.task('styles--clear', function() {
+gulp.task('styles--clear-generated', function() {
   return del(config.inputFiles.styles.main);
 });

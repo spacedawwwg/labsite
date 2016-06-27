@@ -14,7 +14,7 @@ var del = require('del');
 var config = require('../config');
 var handleError = require('../utils/handle-error');
 
-var filelist = config.basePaths.dist + config.labFiles.filelist;
+var pageList = config.basePaths.dist + config.labFiles.pageList;
 
 gulp.task('lab--build', function() {
   return gulp.src(config.labFiles.pages)
@@ -30,8 +30,9 @@ gulp.task('lab--build', function() {
         bustCache: true,
         cwd: process.cwd()
       })
-      .data(filelist)
-      .partials(config.labFiles.views)
+      .data(pageList)
+      .partials(config.labFiles.views.partials)
+      .partials(config.labFiles.views.layouts)
       .helpers(hbHelpers)
       .helpers(hbLayouts)
     )
@@ -76,5 +77,5 @@ gulp.task('lab--build', function() {
 });
 
 gulp.task('lab--compile', ['lab--build'], function() {
-  return del(filelist);
+  return del(pageList);
 });

@@ -15,6 +15,7 @@ var build = function(callback) {
     'styles',
     'markup',
     'assets',
+    'styleguide',
     'lab',
     callback
   );
@@ -31,13 +32,14 @@ gulp.task('production', function(callback) {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['gulpfile.js', 'build/**/*.js'], ['build']);
+  //gulp.watch(['gulpfile.js', 'build/**/*.js'], ['build']);
   gulp.watch(config.paths.styles.src + '**/*.scss', ['styles', 'assets', reload]);
   gulp.watch(config.paths.scripts.src + '**/*.js', ['scripts', reload]);
   gulp.watch([
-    config.paths.views.pages + '**/*',
-    config.paths.views.partials + '**/*',
-    config.paths.views.layouts + '**/*'
+    config.paths.lab.src + '**/*',
+    config.paths.views.src + '**/*',
+    config.paths.data.src + '**/*',
+    config.paths.styleguide.src + '**/*'
   ], ['build', reload]);
 });
 
