@@ -7,7 +7,7 @@ __Password:__ [ENTER PROJECT LAB SITE PASSWORD]
 
 ### Setup
 - Firstly, install __Node.js__ https://nodejs.org/en/download/
-- Once __Node.js__ is installed, install the task runner __gulp__ (`npm install -g gulp`)
+- Once __Node.js__ is installed, install the task runner __gulp__ (`npm install -g gulp-cli`)
 - Clone repository to your machine
 - Via terminal/cmd window, navigate to the folder you cloned the repo to
 - Run the command `npm install`
