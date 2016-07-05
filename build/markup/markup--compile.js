@@ -6,7 +6,6 @@ var extname = require('gulp-extname');
 var inject = require('gulp-inject');
 var prettify = require('gulp-prettify');
 var htmlmin = require('gulp-html-minifier');
-var gutil = require('gulp-util');
 var hb = require('gulp-hb');
 var hbLayouts = require('handlebars-layouts');
 var hbHelpers = require('handlebars-helpers');

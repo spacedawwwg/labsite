@@ -1,6 +1,5 @@
 "use strict";
 var gulp = require('gulp');
-var gutil = require('gulp-util');
 var environments = require('gulp-environments');
 var modernizr = require('gulp-modernizr');
 var plumber = require('gulp-plumber');
