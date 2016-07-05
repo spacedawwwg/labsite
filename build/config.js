@@ -2,6 +2,15 @@
 
 var serverPort = 3020;
 
+var jsAccess = {
+  enabled: true,
+  passwords: [
+    "password",
+    "MyNameIsAndrewBlackledge!",
+    "An0th3r_P455w0rd!"
+  ]
+};
+
 var basePaths = {
   src: 'src/',
   dist: 'dist/',
@@ -119,6 +128,7 @@ var styleOptions = {
 
 module.exports = {
   serverPort: serverPort,
+  jsAccess: jsAccess,
   basePaths: basePaths,
   paths: paths,
   labFiles: labFiles,
