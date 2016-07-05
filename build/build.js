@@ -64,9 +64,9 @@ gulp.task('serve', ['build', 'watch'], function(callback) {
   var localhost = 'http://localhost:' + serverPort;
 
   server.listen(serverPort, function() {
-    gutil.log('Local URL: http://localhost:%s', serverPort);
+    gutil.log(gutil.colors.green('Local URL'), 'http://localhost:' + serverPort);
     ngrok.connect(serverPort, function(error, url) {
-      gutil.log('External URL:', url);
+      gutil.log(gutil.colors.green('External URL:'), url);
       open(localhost, 'google chrome');
       callback();
     });
