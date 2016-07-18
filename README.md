@@ -11,7 +11,7 @@ __Password:__ [ENTER PROJECT LABSITE PASSWORD]
 
 
 ## Setup & Build
-- [Prerequisites](Prerequisites)
+- [Prerequisites](https://github.com/spacedawwwg/labsite/wiki/Prerequisites)
 - [Installation](https://github.com/spacedawwwg/labsite/wiki/Installation)
 - [Configure](https://github.com/spacedawwwg/labsite/wiki/Configure)
 - [Build](https://github.com/spacedawwwg/labsite/wiki/Build)
