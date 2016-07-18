@@ -3,12 +3,10 @@ var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
-var gsgc = require('gulp-sass-generate-contents');
 var pxtorem = require('gulp-pxtorem');
 var autoprefixer = require('gulp-autoprefixer');
 var environments = require('gulp-environments');
 var rename = require('gulp-rename');
-var del = require('del');
 
 var config = require('../config');
 var handleError = require('../utils/handle-error');

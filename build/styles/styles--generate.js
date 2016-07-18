@@ -12,7 +12,7 @@ gulp.task('styles--generate', function() {
     .pipe(plumber({
       errorHandler: handleError
     }))
-    .pipe(gsgc(config.files.styles.generateFile, {}, { disableContents: true }))
+    .pipe(gsgc(config.files.styles.generateFile, {}, { contentsTable: false }))
     .pipe(gulp.dest(config.paths.styles.src));
 });
 
