@@ -14,16 +14,16 @@ var config = require('../config');
 var handleError = require('../utils/handle-error');
 
 gulp.task('styles--generate', function() {
-  return gulp.src(config.inputFiles.styles.itcss)
+  return gulp.src(config.files.styles.itcss)
     .pipe(plumber({
       errorHandler: handleError
     }))
-    .pipe(gsgc(config.inputFiles.styles.main, {}, {disableContents: true }))
+    .pipe(gsgc(config.files.styles.generateFile, {}, { disableContents: true }))
     .pipe(gulp.dest(config.paths.styles.src));
 });
 
 gulp.task('styles--compile', function() {
-  return gulp.src(config.inputFiles.styles.main)
+  return gulp.src(config.files.styles.generateFile)
     .pipe(plumber({
       errorHandler: handleError
     }))
@@ -40,10 +40,10 @@ gulp.task('styles--compile', function() {
     .pipe(autoprefixer(config.styleOptions.autoprefixer))
     .pipe(pxtorem(config.styleOptions.pxtorem))
     .pipe(environments.development(sourcemaps.write()))
-    .pipe(rename(config.outputFiles.styles.main))
+    .pipe(rename(config.files.styles.outputFile))
     .pipe(gulp.dest(config.paths.styles.dist));
 });
 
 gulp.task('styles--clear-generated', function() {
-  return del(config.inputFiles.styles.main);
+  return del(config.files.styles.generateFile);
 });

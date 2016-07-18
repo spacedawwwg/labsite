@@ -8,7 +8,7 @@ var config = require('../config');
 var handleError = require('../utils/handle-error');
 
 gulp.task('lab--copy', function() {
-  return gulp.src(config.labFiles.assets)
+  return gulp.src(config.files.lab.assets)
     .pipe(plumber({
       errorHandler: handleError
     }))

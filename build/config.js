@@ -56,31 +56,30 @@ var paths = {
   }
 };
 
-var labFiles = {
-  pages: paths.lab.src + 'views/pages/*.hbs',
-  views: {
-    layouts: paths.lab.src +  'views/layouts/**/*.hbs',
-    partials: paths.lab.src +  'views/partials/**/*.hbs'
+var files = {
+  lab: {
+    pages: paths.lab.src + 'views/pages/*.hbs',
+    views: {
+      layouts: paths.lab.src +  'views/layouts/**/*.hbs',
+      partials: paths.lab.src +  'views/partials/**/*.hbs'
+    },
+    assets: [
+      paths.lab.src + 'assets/**/*',
+      '!' + paths.lab.src + 'assets/**/*.scss'
+    ],
+    accessJs: paths.lab.dist + 'access.js',
+    pageList: 'pageList.json',
+    styles: {
+      inputFile: paths.lab.src + 'assets/styles/main.scss'
+    }
   },
-  assets: [
-    paths.lab.src + 'assets/**/*',
-    '!' + paths.lab.src + 'assets/**/*.scss'
-  ],
-  accessJs: paths.lab.dist + 'access.js',
-  pageList: 'pageList.json',
-  styles: {
-    main: paths.lab.src + 'assets/styles/main.scss'
-  }
-}
-
-var inputFiles = {
   pages: paths.views.pages + '/**/*.hbs',
   data: paths.data.src + '**/*.json',
   scripts: {
-    main: paths.scripts.src + 'index.js'
+    inputFile: paths.scripts.src + 'index.js',
+    outputFile: 'scripts.js'
   },
   styles: {
-    main: paths.styles.src + 'styles.scss',
     itcss: [
       paths.styles.src + '_settings/**/*.scss',
       paths.styles.src + '_tools/**/*.scss',
@@ -89,7 +88,9 @@ var inputFiles = {
       paths.styles.src + '_objects/**/*.scss',
       paths.styles.src + '_components/**/*.scss',
       paths.styles.src + '_trumps/**/*.scss'
-    ]
+    ],
+    generateFile: paths.styles.src + 'styles.scss',
+    outputFile: 'styles.css',
   },
   views: {
     layouts: paths.views.src + 'layouts/**/*.hbs',
@@ -99,15 +100,6 @@ var inputFiles = {
     outputFile: 'styleguide.html',
     js: paths.styleguide.src + 'styleguide.js',
     sass: paths.styleguide.src + 'styleguide.scss'
-  }
-};
-
-var outputFiles = {
-  scripts: {
-    main: 'scripts.js'
-  },
-  styles: {
-    main: 'styles.css'
   }
 };
 
@@ -131,8 +123,6 @@ module.exports = {
   jsAccess: jsAccess,
   basePaths: basePaths,
   paths: paths,
-  labFiles: labFiles,
-  inputFiles: inputFiles,
-  outputFiles: outputFiles,
+  files: files,
   styleOptions: styleOptions
 };

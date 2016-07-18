@@ -12,12 +12,12 @@ var config = require('../config');
 var handleError = require('../utils/handle-error');
 
 gulp.task('scripts--compile', function() {
-  return browserify(config.inputFiles.scripts.main, {
+  return browserify(config.files.scripts.inputFile, {
       debug: environments.development() ? true : false
     })
     .on('error', handleError)
     .bundle()
-    .pipe(source(config.outputFiles.scripts.main))
+    .pipe(source(config.files.scripts.outputFile))
     .pipe(buffer())
     .pipe(environments.production(uglify()))
     .pipe(gulp.dest(config.paths.scripts.dist))

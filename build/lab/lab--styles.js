@@ -13,7 +13,7 @@ var handleError = require('../utils/handle-error');
 
 gulp.task('lab--styles', function() {
 
-  return gulp.src(config.labFiles.styles.main)
+  return gulp.src(config.files.lab.styles.inputFile)
     .pipe(plumber({
       errorHandler: handleError
     }))

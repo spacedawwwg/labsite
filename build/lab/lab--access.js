@@ -25,13 +25,13 @@ function stringSrc(filename, contents) {
   return src;
 }
 
-gulp.task('lab--access--inject', function() {
+gulp.task('lab--access__inject', function() {
   return gulp.src(config.basePaths.dist + '**/*.html')
     .pipe(plumber({
       errorHandler: handleError
     }))
     .pipe(inject(
-      gulp.src(config.labFiles.accessJs, {
+      gulp.src(config.files.lab.accessJs, {
         read: false
       }), {
         removeTags: true,
@@ -42,7 +42,7 @@ gulp.task('lab--access--inject', function() {
     .pipe(gulp.dest(config.basePaths.dist));
 });
 
-gulp.task('lab--access--passwords', function() {
+gulp.task('lab--access__passwords', function() {
   return stringSrc('access.json', config.jsAccess.passwords)
     .pipe(gulp.dest(config.paths.lab.dist));
 });
@@ -54,8 +54,8 @@ gulp.task('lab--access', function(callback) {
 
   if (config.jsAccess.enabled) {
     runSequence(
-      'lab--access--passwords',
-      'lab--access--inject',
+      'lab--access__passwords',
+      'lab--access__inject',
       callback
     );
   } else {

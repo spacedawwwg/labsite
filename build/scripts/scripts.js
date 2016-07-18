@@ -1,8 +1,6 @@
 "use strict";
 var gulp = require('gulp');
 var runSequence = require('run-sequence').use(gulp);
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
 
 gulp.task('scripts', function(callback) {
   runSequence(
@@ -10,13 +8,5 @@ gulp.task('scripts', function(callback) {
     'scripts--modernizr',
     'scripts--compile',
     callback
-  );
-});
-
-gulp.task('scripts--watch', function() {
-  runSequence(
-    'clean--scripts',
-    'scripts',
-    reload
   );
 });

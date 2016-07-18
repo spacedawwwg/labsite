@@ -2,6 +2,7 @@
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var jshint = require('gulp-jshint');
+var stylish = require('jshint-stylish');
 
 var config = require('../config');
 var handleError = require('../utils/handle-error');
@@ -12,5 +13,5 @@ gulp.task('scripts--lint', function() {
       errorHandler: handleError
     }))
     .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'));
+    .pipe(jshint.reporter(stylish));
 });

@@ -14,10 +14,10 @@ var del = require('del');
 var config = require('../config');
 var handleError = require('../utils/handle-error');
 
-var pageList = config.basePaths.dist + config.labFiles.pageList;
+var pageList = config.basePaths.dist + config.files.lab.pageList;
 
 gulp.task('lab--build', function() {
-  return gulp.src(config.labFiles.pages)
+  return gulp.src(config.files.lab.pages)
     .pipe(plumber({
       errorHandler: handleError
     }))
@@ -31,8 +31,8 @@ gulp.task('lab--build', function() {
         cwd: process.cwd()
       })
       .data(pageList)
-      .partials(config.labFiles.views.partials)
-      .partials(config.labFiles.views.layouts)
+      .partials(config.files.lab.views.partials)
+      .partials(config.files.lab.views.layouts)
       .helpers(hbHelpers)
       .helpers(hbLayouts)
     )
@@ -55,8 +55,8 @@ gulp.task('lab--build', function() {
     .pipe(inject(
       gulp.src([
         config.paths.lab.dist + '*.js',
-        '!' + config.labFiles.accessJs,
-        '!' + config.labFiles.styledownJs
+        '!' + config.files.lab.accessJs,
+        '!' + config.files.lab.styledownJs
       ], {
         read: false
       }), {

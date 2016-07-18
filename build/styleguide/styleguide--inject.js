@@ -7,7 +7,7 @@ var config = require('../config');
 var handleError = require('../utils/handle-error');
 
 gulp.task('styleguide--inject', function() {
-  return gulp.src(config.basePaths.dist + config.inputFiles.styleguide.outputFile)
+  return gulp.src(config.basePaths.dist + config.files.styleguide.outputFile)
     .pipe(plumber({
       errorHandler: handleError
     }))

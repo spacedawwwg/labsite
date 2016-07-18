@@ -1,8 +1,6 @@
 "use strict";
 var gulp = require('gulp');
 var runSequence = require('run-sequence').use(gulp);
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
 var environments = require('gulp-environments');
 var gutil = require('gulp-util');
 
@@ -33,15 +31,14 @@ gulp.task('production', function(callback) {
 });
 
 gulp.task('watch', function() {
-  //gulp.watch(['gulpfile.js', 'build/**/*.js'], ['build']);
-  gulp.watch(config.paths.styles.src + '**/*.scss', ['styles', 'assets', reload]);
-  gulp.watch(config.paths.scripts.src + '**/*.js', ['scripts', reload]);
+  gulp.watch(config.paths.styles.src + '**/*.scss', ['styles', 'assets']);
+  gulp.watch(config.paths.scripts.src + '**/*.js', ['scripts']);
   gulp.watch([
     config.paths.lab.src + '**/*',
     config.paths.views.src + '**/*',
     config.paths.data.src + '**/*',
     config.paths.styleguide.src + '**/*'
-  ], ['build', reload]);
+  ], ['build']);
 });
 
 gulp.task('serve', ['build', 'watch'], function(callback) {

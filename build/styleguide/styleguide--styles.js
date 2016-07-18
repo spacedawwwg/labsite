@@ -12,7 +12,7 @@ var config = require('../config');
 var handleError = require('../utils/handle-error');
 
 gulp.task('styleguide--styles', function() {
-  return gulp.src(config.inputFiles.styleguide.sass)
+  return gulp.src(config.files.styleguide.sass)
     .pipe(plumber({
       errorHandler: handleError
     }))

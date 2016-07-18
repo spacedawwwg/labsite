@@ -20,7 +20,7 @@ var handleError = require('../utils/handle-error');
 var pageList = require('../utils/page-list');
 
 gulp.task('markup--compile', function() {
-  return gulp.src(config.inputFiles.pages)
+  return gulp.src(config.files.pages)
     .pipe(plumber({
       errorHandler: handleError
     }))
@@ -32,10 +32,10 @@ gulp.task('markup--compile', function() {
         bustCache: true,
         cwd: process.cwd()
       })
-      .data(config.inputFiles.data)
-      .partials(config.inputFiles.views.partials)
-      .partials(config.inputFiles.views.layouts)
-      .helpers(config.inputFiles.helpers)
+      .data(config.files.data)
+      .partials(config.files.views.partials)
+      .partials(config.files.views.layouts)
+      .helpers(config.files.helpers)
       .helpers(hbHelpers)
       .helpers(hbLayouts)
     )
@@ -76,7 +76,7 @@ gulp.task('markup--compile', function() {
     .pipe(prettify({
       indent_size: 2
     }))
-    .pipe(pageList(config.labFiles.pageList))
+    .pipe(pageList(config.files.lab.pageList))
     .pipe(extname())
     .pipe(gulp.dest(config.basePaths.dist));
 });

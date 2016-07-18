@@ -7,7 +7,7 @@
   "node": true,
   "globals": {
     "$": true,
-    "S2": true,
+    "Lab": true,
     "clearInterval": true,
     "clearTimeout": true,
     "console": true,

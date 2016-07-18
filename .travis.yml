@@ -4,4 +4,6 @@ node_js:
 cache:
   directories:
   - node_modules
-script: gulp
+script:
+- gulp
+- gulp production
