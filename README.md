@@ -1,6 +1,7 @@
 # Lab Site Boilerplate
 [![Build Status](https://travis-ci.org/spacedawwwg/labsite-boilerplate.svg?branch=master)](https://travis-ci.org/spacedawwwg/labsite-boilerplate)
 [![GitHub version](https://badge.fury.io/gh/spacedawwwg%2Flabsite-boilerplate.svg)](https://badge.fury.io/gh/spacedawwwg%2Flabsite-boilerplate)
+[![devDependency Status](https://david-dm.org/spacedawwwg/labsite-boilerplate/dev-status.svg)](https://david-dm.org/spacedawwwg/labsite-boilerplate#info=devDependencies)
 
 
 ### Lab site source code for [ENTER PROJECT NAME]
