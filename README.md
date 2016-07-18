@@ -1,17 +1,16 @@
-# Lab Site
-[![Build Status](https://travis-ci.org/spacedawwwg/labsite-boilerplate.svg?branch=master)](https://travis-ci.org/spacedawwwg/labsite-boilerplate)
-[![devDependency Status](https://david-dm.org/spacedawwwg/labsite-boilerplate/dev-status.svg)](https://david-dm.org/spacedawwwg/labsite-boilerplate#info=devDependencies)
+# Labsite
+[![Build Status](https://travis-ci.org/spacedawwwg/labsite.svg?branch=master)](https://travis-ci.org/spacedawwwg/labsite)
+[![devDependency Status](https://david-dm.org/spacedawwwg/labsite/dev-status.svg)](https://david-dm.org/spacedawwwg/labsite#info=devDependencies)
 
+**Labsite boilerplate source code for building and listing static website pages.**
 
-### Lab site boilerplate source code for [ENTER PROJECT NAME]
-
-__URL:__ [ENTER PROJECT LAB SITE URL]
-
-__Password:__ [ENTER PROJECT LAB SITE PASSWORD]
+* Author: [Paul Welsh](https://paulwelsh.info)
+* Twitter: [@spacedawwwg](https://twitter.com/spacedawwwg)
+* Email: [hello@paulwelsh.info](mailto:hello@paulwelsh.info)
 
 
 ## Setup & Build
-- [Prerequisites](https://github.com/spacedawwwg/labsite-boilerplate/wiki/Prerequisites)
-- [Installation](https://github.com/spacedawwwg/labsite-boilerplate/wiki/Installation)
-- [Configure](https://github.com/spacedawwwg/labsite-boilerplate/wiki/Configure)
-- [Build](https://github.com/spacedawwwg/labsite-boilerplate/wiki/Build)
+- [Prerequisites](https://github.com/spacedawwwg/labsite/wiki/Prerequisites)
+- [Installation](https://github.com/spacedawwwg/labsite/wiki/Installation)
+- [Configure](https://github.com/spacedawwwg/labsite/wiki/Configure)
+- [Build](https://github.com/spacedawwwg/labsite/wiki/Build)
