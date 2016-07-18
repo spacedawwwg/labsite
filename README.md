@@ -5,7 +5,7 @@
 **Labsite boilerplate source code for building a list of static website pages.**
 
 * Author: [Paul Welsh](https://paulwelsh.info)
-* Twitter: [@frontendphil](https://twitter.com/spacedawwwg)
+* Twitter: [@spacedawwwg](https://twitter.com/spacedawwwg)
 * Email: [hello@paulwelsh.info](mailto:hello@paulwelsh.info)
 
 ***
