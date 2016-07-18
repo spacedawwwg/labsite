@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/spacedawwwg/labsite.svg?branch=master)](https://travis-ci.org/spacedawwwg/labsite)
 [![devDependency Status](https://david-dm.org/spacedawwwg/labsite/dev-status.svg)](https://david-dm.org/spacedawwwg/labsite#info=devDependencies)
 
-**Labsite boilerplate source code for building a list of static website pages.**
+**Labsite boilerplate source code for building and listing static website pages.**
 
 * Author: [Paul Welsh](https://paulwelsh.info)
 * Twitter: [@spacedawwwg](https://twitter.com/spacedawwwg)
