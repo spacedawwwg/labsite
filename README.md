@@ -8,7 +8,6 @@
 * Twitter: [@spacedawwwg](https://twitter.com/spacedawwwg)
 * Email: [hello@paulwelsh.info](mailto:hello@paulwelsh.info)
 
-***
 
 ## Setup & Build
 - [Prerequisites](https://github.com/spacedawwwg/labsite/wiki/Prerequisites)
