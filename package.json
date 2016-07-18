@@ -1,10 +1,10 @@
 {
-  "name": "labsite-boilerplate",
+  "name": "labsite",
   "version": "0.5.0",
   "description": "Source code for a static HTML lab site",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/spacedawwwg/labsite-boilerplate.git"
+    "url": "https://gitlab.com/spacedawwwg/labsite.git"
   },
   "homepage": "http://spacedawwwg.com",
   "main": "gulpfile.js",
