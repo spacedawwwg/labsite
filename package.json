@@ -18,7 +18,7 @@
     "node": ">=4.0.0"
   },
   "devDependencies": {
-    "browserify": "^14.0.0",
+    "browserify": "^14.3.0",
     "del": "^2.2.1",
     "finalhandler": "^1.0.0",
     "gray-matter": "^2.0.2",
