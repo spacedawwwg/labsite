@@ -39,7 +39,7 @@
     "gulp-pxtorem": "^3.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "gulp-sass-generate-contents": "^0.3.2",
+    "gulp-sass-generate-contents": "^0.5.0",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-styledown": "^0.0.2",
     "gulp-uglify": "^3.0.0",
