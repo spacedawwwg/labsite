@@ -49,7 +49,7 @@
     "imagemin-pngquant": "^5.1.0",
     "jshint": "^2.9.5",
     "jshint-stylish": "^2.2.1",
-    "ngrok": "2.x",
+    "ngrok": "2.3.0",
     "open": "0.0.5",
     "require-dir": "^1.0.0",
     "robots-generator": "^2.3.6",
