@@ -1,15 +1,13 @@
 "use strict";
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
-var styledown = require('gulp-styledown');
+var styledown = require('@philippevay/gulp-styledown');
 var fs = require('fs');
-var inject = require('gulp-inject');
-var prettify = require('gulp-prettify');
 
 var config = require('../config');
 var handleError = require('../utils/handle-error');
 
-gulp.task('styleguide--compile', function() {
+gulp.task('styleguide--compile', function () {
   return gulp.src(config.paths.styles.dist + config.files.styles.outputFile)
     .pipe(plumber({
       errorHandler: handleError
