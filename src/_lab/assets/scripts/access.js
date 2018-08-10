@@ -1,6 +1,6 @@
 "use strict";
 var Lab = Lab || {};
-Lab.Access = (function() {
+Lab.Access = (function () {
 
   var loginPage = '/login.html';
   var landingPage = '/index.html';
@@ -14,10 +14,11 @@ Lab.Access = (function() {
 
   function _readFile(path, success, error) {
     var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
       if (xhr.readyState === XMLHttpRequest.DONE) {
         if (xhr.status === 200) {
           if (success) {
+            console.log(xhr.responseText);
             success(xhr.responseText);
           }
         } else {
@@ -85,7 +86,9 @@ Lab.Access = (function() {
 
   function _checkPassword() {
     var password = input.value;
-    _readFile(accessFile, function(contents) {
+
+    _readFile(accessFile, function (contents) {
+      console.log(contents);
       accessList = JSON.parse(contents);
       var correct = _inAccessList(password);
       if (correct) {
@@ -98,12 +101,12 @@ Lab.Access = (function() {
       } else {
         input.value = '';
         input.focus();
-        setTimeout(function() {
+        setTimeout(function () {
           errorContainer.innerHTML = errorText;
         }, 100);
         return false;
       }
-    }, function(xhr) {
+    }, function (xhr) {
       window.alert(xhr);
     });
   };
@@ -131,16 +134,16 @@ Lab.Access = (function() {
     if (page !== loginPage) {
       _redirect(loginPage);
     }
-    window.onload = function() {
+    window.onload = function () {
       form = document.getElementById('lab_passwordForm');
       input = form.lab_passwordInput;
       errorContainer = document.getElementById('lab_passwordError');
       if (form) {
-        form.onsubmit = function() {
+        form.onsubmit = function () {
           _checkPassword();
           return false;
         };
-        input.onkeyup = function() {
+        input.onkeyup = function () {
           errorContainer.innerHTML = '';
         };
       }
