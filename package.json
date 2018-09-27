@@ -50,7 +50,7 @@
     "jshint": "^2.9.5",
     "jshint-stylish": "^2.2.1",
     "jsonfile": "^4.0.0",
-    "ngrok": "2.3.0",
+    "ngrok": "3.1.0",
     "require-dir": "^1.0.0",
     "robots-generator": "^2.3.6",
     "run-sequence": "^2.2.1",
