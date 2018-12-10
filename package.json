@@ -23,7 +23,7 @@
     "del": "^3.0.0",
     "finalhandler": "^1.1.1",
     "gray-matter": "^4.0.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-environments": "^0.1.2",
     "gulp-extname": "^0.2.2",
