@@ -12,4 +12,9 @@ insert_final_newline = true
 
 # Trailing whitespace is significant in markdown files.
 [*.md]
+trim_trailing_whitespace =
+
+# Trailing whitespace is significant in sass files.
+[*.scss]
 trim_trailing_whitespace = false
+
