@@ -1,12 +1,9 @@
 'use strict';
 var gulp = require('gulp');
-var FwdRef = require('undertaker-forward-reference');
 var environments = require('gulp-environments');
 var gutil = require('gulp-util');
 
 var config = require('./config');
-
-gulp.registry(FwdRef());
 
 gulp.task('buildTasks', gulp.series(
   'clean--all',
