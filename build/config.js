@@ -58,10 +58,10 @@ var paths = {
 
 var files = {
   lab: {
-    pages: paths.lab.src + 'views/pages/*.hbs',
+    pages: paths.lab.src + 'views/pages/**/*.hbs',
     views: {
-      layouts: paths.lab.src +  'views/layouts/**/*.hbs',
-      partials: paths.lab.src +  'views/partials/**/*.hbs'
+      layouts: paths.lab.src + 'views/layouts/**/*.hbs',
+      partials: paths.lab.src + 'views/partials/**/*.hbs'
     },
     assets: [
       paths.lab.src + 'assets/**/*',
@@ -108,7 +108,7 @@ var styleOptions = {
     browsers: [
       'last 3 versions',
       'ie 9',
-      'iOS 7'
+      'iOS 11'
     ]
   },
   pxtorem: {

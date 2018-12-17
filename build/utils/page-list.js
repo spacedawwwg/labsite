@@ -15,15 +15,15 @@ module.exports = function(outputFile) {
   var files = [];
   var fileList = [];
 
-  return through.obj(function(file, enc, cb) {
+  return through.obj(function(file, enc, callback) {
 
     if (file.isNull()) {
-      cb(null, file);
+      callback(null, file);
       return;
     }
 
     if (file.isStream()) {
-      cb(new gutil.PluginError('pageList', 'Streams not supported'));
+      callback(new gutil.PluginError('pageList', 'Streams not supported'));
       return;
     }
 
@@ -45,14 +45,14 @@ module.exports = function(outputFile) {
     }
 
     this.push(file);
-    cb();
-  }, function(cb) {
+    callback();
+  }, function(callback) {
     var fileListFile = new File({
       path: outputFile,
       contents: new Buffer(JSON.stringify(fileList, null, '  '))
     });
 
     this.push(fileListFile);
-    cb();
+    callback();
   });
 };

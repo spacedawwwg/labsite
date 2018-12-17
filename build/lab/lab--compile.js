@@ -5,7 +5,6 @@ var frontMatter = require('gulp-front-matter');
 var extname = require('gulp-extname');
 var inject = require('gulp-inject');
 var prettify = require('gulp-prettify');
-var htmlmin = require('gulp-html-minifier');
 var hb = require('gulp-hb');
 var hbLayouts = require('handlebars-layouts');
 var hbHelpers = require('handlebars-helpers');
@@ -16,8 +15,8 @@ var handleError = require('../utils/handle-error');
 
 var pageList = config.basePaths.dist + config.files.lab.pageList;
 
-gulp.task('lab--build', function() {
-  return gulp.src(config.files.lab.pages)
+gulp.task('lab--build', function(callback) {
+  return gulp.src(config.files.lab.pages, { allowEmpty: true })
     .pipe(plumber({
       errorHandler: handleError
     }))
@@ -37,16 +36,14 @@ gulp.task('lab--build', function() {
       .helpers(hbLayouts)
     )
     .pipe(inject(
-      gulp.src([
-        config.paths.lab.dist + '*.css'
-      ], {
+      gulp.src(config.paths.lab.dist + '*.css', {
         read: false
       }), {
         ignorePath: config.basePaths.dist,
         empty: true,
         removeTags: true,
         name: 'head',
-        transform: function (filepath) {
+        transform: function(filepath) {
           arguments[0] = filepath + '?v=' + Math.random();
           return inject.transform.apply(inject.transform, arguments);
         }
@@ -64,7 +61,7 @@ gulp.task('lab--build', function() {
         empty: true,
         removeTags: true,
         name: 'foot',
-        transform: function (filepath) {
+        transform: function(filepath) {
           arguments[0] = filepath + '?v=' + Math.random();
           return inject.transform.apply(inject.transform, arguments);
         }
@@ -76,6 +73,6 @@ gulp.task('lab--build', function() {
     .pipe(gulp.dest(config.basePaths.dist));
 });
 
-gulp.task('lab--compile', ['lab--build'], function() {
-  return del(pageList);
+gulp.task('lab--compile', gulp.parallel('lab--build'), function(callback) {
+  del(pageList, callback);
 });

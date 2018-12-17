@@ -4,9 +4,7 @@ var environments = require('gulp-environments');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var browserify = require('browserify');
-var plumber = require('gulp-plumber');
 var uglify = require('gulp-uglify');
-var sourcemaps = require('gulp-sourcemaps');
 
 var config = require('../config');
 var handleError = require('../utils/handle-error');

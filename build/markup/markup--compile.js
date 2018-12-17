@@ -5,22 +5,16 @@ var frontMatter = require('gulp-front-matter');
 var extname = require('gulp-extname');
 var inject = require('gulp-inject');
 var prettify = require('gulp-prettify');
-var htmlmin = require('gulp-html-minifier');
 var hb = require('gulp-hb');
 var hbLayouts = require('handlebars-layouts');
 var hbHelpers = require('handlebars-helpers');
-var through = require('through2');
-var path = require('path');
-var File = require('vinyl');
-var fs = require('fs');
-var grayMatter = require('gray-matter');
 
 var config = require('../config');
 var handleError = require('../utils/handle-error');
 var pageList = require('../utils/page-list');
 
 gulp.task('markup--compile', function() {
-  return gulp.src(config.files.pages)
+  return gulp.src(config.files.pages, { allowEmpty: true })
     .pipe(plumber({
       errorHandler: handleError
     }))
@@ -44,6 +38,7 @@ gulp.task('markup--compile', function() {
         config.paths.styles.dist + '**/*.css',
         config.paths.scripts.dist + 'modernizr.js'
       ], {
+        allowEmpty: true,
         read: false
       }), {
         ignorePath: config.basePaths.dist,
@@ -61,6 +56,7 @@ gulp.task('markup--compile', function() {
         config.paths.scripts.dist + '**/*.js',
         '!' + config.paths.scripts.dist + 'modernizr.js'
       ], {
+        allowEmpty: true,
         read: false
       }), {
         ignorePath: config.basePaths.dist,

@@ -1,32 +1,47 @@
 'use strict';
 var gulp = require('gulp');
-var runSequence = require('run-sequence').use(gulp);
+var FwdRef = require('undertaker-forward-reference');
 var environments = require('gulp-environments');
 var gutil = require('gulp-util');
 
 var config = require('./config');
 
-var build = function(callback) {
-  runSequence('clean--all', 'scripts', 'styles', 'markup', 'assets', 'styleguide', 'lab', 'robots', callback);
-};
+gulp.registry(FwdRef());
 
-gulp.task('build', function(callback) {
-  environments.current(environments.development);
-  build(callback);
-});
+gulp.task('buildTasks', gulp.series(
+  'clean--all',
+  'scripts',
+  'styles',
+  'markup',
+  'assets',
+  'styleguide',
+  'lab',
+  'robots'
+));
 
-gulp.task('production', function(callback) {
-  environments.current(environments.production);
-  build(callback);
-});
+gulp.task('build', gulp.series(
+  function(callback) {
+    environments.current(environments.development);
+    callback();
+  },
+  'buildTasks'
+));
+
+gulp.task('production', gulp.series(
+  function(callback) {
+    environments.current(environments.production);
+    callback();
+  },
+  'buildTasks'
+));
 
 gulp.task('watch', function() {
-  gulp.watch(config.paths.styles.src + '**/*.scss', ['styles', 'assets']);
-  gulp.watch(config.paths.scripts.src + '**/*.js', ['scripts']);
-  gulp.watch([config.paths.lab.src + '**/*', config.paths.views.src + '**/*', config.paths.data.src + '**/*', config.paths.styleguide.src + '**/*'], ['build']);
+  gulp.watch(config.paths.styles.src + '**/*.scss', gulp.parallel('styles', 'assets'));
+  gulp.watch(config.paths.scripts.src + '**/*.js', gulp.parallel('scripts'));
+  gulp.watch([config.paths.lab.src + '**/*', config.paths.views.src + '**/*', config.paths.data.src + '**/*', config.paths.styleguide.src + '**/*'], gulp.parallel('build'));
 });
 
-gulp.task('serve', ['build', 'watch'], function(callback) {
+gulp.task('server', function(callback) {
   var http = require('http');
   var serveStatic = require('serve-static');
   var finalhandler = require('finalhandler');
@@ -53,4 +68,6 @@ gulp.task('serve', ['build', 'watch'], function(callback) {
   });
 });
 
-gulp.task('default', ['build']);
+gulp.task('serve', gulp.series('build', 'server', 'watch'));
+
+gulp.task('default', gulp.parallel('build'));

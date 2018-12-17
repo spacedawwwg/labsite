@@ -6,13 +6,11 @@ var sass = require('gulp-sass');
 var pxtorem = require('gulp-pxtorem');
 var autoprefixer = require('gulp-autoprefixer');
 var environments = require('gulp-environments');
-var rename = require('gulp-rename');
 
 var config = require('../config');
 var handleError = require('../utils/handle-error');
 
 gulp.task('lab--styles', function() {
-
   return gulp.src(config.files.lab.styles.inputFile)
     .pipe(plumber({
       errorHandler: handleError

@@ -7,7 +7,7 @@ var config = require('../config');
 var handleError = require('./handle-error');
 
 gulp.task('robots', function() {
-  gulp.src(config.basePaths.dist + 'index.html')
+  return gulp.src(config.basePaths.dist + 'index.html', { allowEmpty: true })
     .pipe(plumber({
       errorHandler: handleError
     }))
