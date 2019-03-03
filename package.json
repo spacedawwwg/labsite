@@ -22,7 +22,7 @@
     "acorn": "^6.0.4",
     "async-once": "^1.0.1",
     "browserify": "^16.2.3",
-    "del": "^3.0.0",
+    "del": "^4.0.0",
     "finalhandler": "^1.1.1",
     "gray-matter": "^4.0.1",
     "gulp": "^4.0.0",
