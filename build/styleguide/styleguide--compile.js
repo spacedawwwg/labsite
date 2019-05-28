@@ -16,7 +16,7 @@ gulp.task('styleguide--compile', function () {
       filename: config.files.styleguide.outputFile,
       head: '',
       body: 'main#styleguide.sg-main(sg-content)',
-      indentSize: 2,
+      // indentSize: 2,
       template: fs.readFileSync(config.basePaths.dist + config.files.styleguide.outputFile, 'utf8')
     }))
     .pipe(gulp.dest(config.basePaths.dist));
