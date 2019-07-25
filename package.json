@@ -36,7 +36,7 @@
     "gulp-imagemin": "^6.0.0",
     "gulp-inject": "^5.0.2",
     "gulp-jshint": "^2.1.0",
-    "gulp-modernizr": "^3.2.1",
+    "gulp-modernizr": "^3.3.0",
     "gulp-plumber": "^1.2.1",
     "gulp-prettify": "^0.5.0",
     "gulp-pxtorem": "^3.0.0",
