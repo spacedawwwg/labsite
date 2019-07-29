@@ -21,7 +21,7 @@
     "@philippevay/gulp-styledown": "0.0.4",
     "acorn": "^6.2.1",
     "async-once": "^1.0.1",
-    "browserify": "^16.2.3",
+    "browserify": "^16.3.0",
     "del": "^5.0.0",
     "finalhandler": "^1.1.2",
     "gray-matter": "^4.0.2",
