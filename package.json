@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@philippevay/gulp-styledown": "0.0.4",
-    "acorn": "^6.1.1",
+    "acorn": "^6.2.1",
     "async-once": "^1.0.1",
     "browserify": "^16.2.3",
     "del": "^4.1.1",
