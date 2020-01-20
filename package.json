@@ -40,7 +40,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-prettify": "^0.5.0",
     "gulp-pxtorem": "^3.0.0",
-    "gulp-rename": "^1.4.0",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sass-generate-contents": "andrewbrandwood/gulp-sass-generate-contents",
     "gulp-sourcemaps": "^2.6.5",
