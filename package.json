@@ -51,7 +51,7 @@
     "imagemin-pngquant": "^8.0.0",
     "jshint": "^2.10.2",
     "jshint-stylish": "^2.2.1",
-    "jsonfile": "^5.0.0",
+    "jsonfile": "^6.0.0",
     "ngrok": "3.2.7",
     "require-dir": "^1.2.0",
     "robots-generator": "^2.3.6",
