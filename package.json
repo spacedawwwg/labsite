@@ -52,7 +52,7 @@
     "jshint": "^2.10.2",
     "jshint-stylish": "^2.2.1",
     "jsonfile": "^6.0.1",
-    "ngrok": "3.2.7",
+    "ngrok": "3.3.0",
     "require-dir": "^1.2.0",
     "robots-generator": "^2.3.6",
     "serve-static": "^1.14.1",
